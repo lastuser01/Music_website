@@ -87,6 +87,10 @@ a {
     display: none;
 }
 
+#toggle {
+    z-index: 10;
+}
+
 .toggle:hover {
     cursor: pointer;
 
