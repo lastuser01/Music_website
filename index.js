@@ -170,8 +170,31 @@ const observer5=new IntersectionObserver(entries=>{
 
 observer5.observe(document.querySelector('.content3_subhead'));
 
+let content2subhead=document.querySelector('.content2_subhead');
+content2subhead.classList.remove('fade_2')
+let content2head=document.querySelectorAll('.content2_head');
+content2head[0].classList.remove('fade_2')
+content2head[1].classList.remove('fade_2')
+content2head[2].classList.remove('fade_2')
 
+const observer6=new IntersectionObserver(entries=>{
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      content2subhead.classList.add('fade_2')
+      content2head[0].classList.add('fade_2')
+      content2head[1].classList.add('fade_2')
+      content2head[2].classList.add('fade_2')
+    }
+    else{
+      content2subhead.classList.remove('fade_2')
+      content2head[0].classList.remove('fade_2')
+content2head[1].classList.remove('fade_2')
+content2head[2].classList.remove('fade_2')
+    }
+  });
+})
 
+observer6.observe(document.querySelector(".content2_subhead"))
 
 
 
